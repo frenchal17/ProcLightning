@@ -9,7 +9,7 @@ void setup(){
   
   minim = new Minim(this);
   
-   player = minim.loadFile("/Users/alexfrench/Desktop/proc/05 Never Mess With Sunday.mp3", 2048);
+   player = minim.loadFile("/Users/alexfrench/Desktop/proc/AudioTreats Scope.mp3", 2048);
     player.play();
 }
 
@@ -34,11 +34,13 @@ void draw(){
   fill(220,10);
   rect(-5,-5,width + 5,height + 5);
   for(int i = 0; i < player.left.size()-1; i++)
-    {
-    line(i, height/2 + player.left.get(i)*50, i+1, height/2 + player.left.get(i+1)*50);
-   // line(i, 150 + player.right.get(i)*50, i+1, 150 + player.right.get(i+1)*50);
+  {
+    line(i, height/2 + player.left.get(i)*100, i+1, height/2 + player.left.get(i+1)*100);
+    //line(i, height / 3 + player.left.get(i)*50, i+1, 2 * height/3 + player.left.get(i+1)*50);
+    line(i, height/4 + player.right.get(i)*100, i+1, height/4 + player.right.get(i+1)*100);
+    line(i, 3 * height/4 + player.right.get(i)*100, i+1, 3 * height/4 + player.right.get(i+1)*100);
     
-    }
+  }
   
  /* if (x > z){
        background(201,200,200);
